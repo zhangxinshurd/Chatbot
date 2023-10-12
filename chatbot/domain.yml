@@ -1,0 +1,99 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - query_product
+  - place_order
+  - order_delay_enquiry
+  - order_delay_reason
+  - ask_human_agent
+  - order_cancel
+  - damaged_reason
+  - product_damage
+  - product_damage_return
+  - product_damage_replace
+
+entities:
+  - product
+  - order
+
+slots:
+  product:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: product
+
+  order:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: order
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_for_product_name:
+    - text: "Could you please tell me the name of the product you're interested in?"
+  utter_ask_for_order_number:
+    - text: "Could you please provide the order number?"
+
+  utter_ask_human_agent:
+    - text: "OK, our human agent Mr.Li's contact number is 1234567890. You can call him directly."
+
+  utter_order_cancel:
+    - text: "OK, your order has been cancelled. You will receive a confirmation email shortly."
+
+  utter_product_damage:
+    - text: "Sorry to hear that. Please provide your order number and Specific reason for damage."
+
+  utter_product_damage_method:
+    - text: "OK, do you want to return or replace the product?"
+
+  utter_product_damage_return:
+    - text: "OK, your return request has been submitted. You will receive a confirmation email shortly."
+
+  utter_product_damage_replace:
+    - text: "OK, your replacement request has been submitted. You will receive a confirmation email shortly."
+
+
+
+
+
+actions:
+  - action_product
+  - action_order
+  - action_order_delay_enquiry
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

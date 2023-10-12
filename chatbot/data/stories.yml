@@ -1,0 +1,77 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: query product
+  steps:
+  - intent: query_product
+  - action: action_product
+
+- story: place order
+  steps:
+  - intent: place_order
+  - action: action_order
+
+- story: order delay enquiry
+  steps:
+  - intent: order_delay_enquiry
+  - action: action_order_delay_enquiry
+
+
+- story: ask human agent
+  steps:
+  - intent: ask_human_agent
+  - action: utter_ask_human_agent
+
+- story: order cancel
+  steps:
+  - intent: order_cancel
+  - action: utter_order_cancel
+
+- story: product damage
+  steps:
+  - intent: product_damage
+  - action: utter_product_damage
+  - intent: damaged_reason
+  - action: utter_product_damage_method
+
+- story: product damage return
+  steps:
+  - intent: product_damage_return
+  - action: utter_product_damage_return
+
+- story: product damage replace
+  steps:
+  - intent: product_damage_replace
+  - action: utter_product_damage_replace
+
+
+
+

@@ -1,0 +1,165 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: query_product
+  examples: |
+    - I want to see [phone](product)
+    - Do you have a [TV](product)
+    - Can I have a look at [laptop](product)?
+
+- intent: place_order
+  examples: |
+    - Can you tell me the status of order [10001](order)
+    - What's the status of my order [10001](order)
+    - Has my order [10001](order) been shipped
+
+- intent: order_delay_enquiry
+  examples: |
+    - Is there a delay in my order [12345](order)?
+    - Is my order [12345](order) delayed?
+    - Is there a delay in my order [12345](order) delivery?
+    - Is my order [12345](order) delivery delayed?
+    - Is my order [12345](order) delayed?
+
+
+- intent: ask_human_agent
+  examples: |
+    - Can I talk to a human agent?
+    - Can I talk to a human?
+    - Can I talk to a real person?
+    - Can I talk to a real human?
+
+- intent: order_cancel
+  examples: |
+    - I want to cancel my order [12345](order)
+    - Can you cancel my order [12345](order)?
+    - Please cancel my order [12345](order)
+    - I want to cancel my order [12345](order) delivery
+    - Can you cancel my order [12345](order) delivery?
+    - Please cancel my order [12345](order) delivery
+
+- intent: product_damage
+  examples: |
+    - My [phone](product) is damaged
+    - My [TV](product) is broken
+    - My [TV](product) is not working
+    - My [phone](product) is not functioning
+
+- intent: damaged_reason
+  examples: |
+    - My order [12345](order) is damaged
+    - My order [12345](order) is broken
+    - My order [12345](order) is not working
+    - My order [12345](order) is not functioning
+
+- intent: product_damage_return
+  examples: |
+    - I want to return my [phone](product)
+    - I want to return my [TV](product)
+    - I want to return my [laptop](product)
+    - I want to return my [phone](product) and get a refund
+    - I want to return my [TV](product) and get a refund
+    - I want to return my [laptop](product) and get a refund
+    
+
+- intent: product_damage_replace
+  examples: |
+    - I want to replace my [phone](product)
+    - I want to replace my [TV](product)
+    - I want to replace my [laptop](product)
+    - I want to replace my [phone](product) with a new one
+    - I want to replace my [TV](product) with a new one
+    - I want to replace my [laptop](product) with a new one
+    
+
+
+    
